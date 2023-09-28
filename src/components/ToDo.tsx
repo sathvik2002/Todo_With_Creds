@@ -15,9 +15,11 @@ export default function ToDO() {
     itemsFromLocalStorage
   );
 
-  useEffect(() => {
-    localStorage.setItem("items", JSON.stringify(arr));
-  }, [arr]);
+  if (typeof window !== "undefined") {
+    useEffect(() => {
+      localStorage.setItem("items", JSON.stringify(arr));
+    }, [arr]);
+  }
 
   return (
     <div className="h-fit min-h-[20%] w-2/3  relative">
