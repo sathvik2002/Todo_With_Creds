@@ -1,20 +1,7 @@
 import Cards from "@/components/Cards";
-import { items, itemsType } from "@/components/ItemsData";
+import currentItems from "@/components/ItemsData";
 
 export default function Home() {
-  let currentItems: itemsType = [];
-  let i = 0;
-  const NUMBER_OF_ITEMS = 10;
-
-  while (i < 3) {
-    let x = Math.random() * NUMBER_OF_ITEMS;
-    x = Math.trunc(x);
-    if (!currentItems.includes(items[x])) {
-      currentItems.push(items[x]);
-      i++;
-    }
-  }
-
   return (
     <div className="h-full grid md:grid-cols-3 ps-8 pe-8 gap-12 sm:grid-cols-1 pt-6">
       <Cards

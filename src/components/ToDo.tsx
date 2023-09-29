@@ -20,7 +20,7 @@ export default function ToDO() {
   return (
     <div className="h-fit min-h-[20%] w-2/3  relative">
       <div className="w-full flex justify-center border border-purple-400 rounded-md bg-purple-400 p-4 text-white font-bold">
-        TO DO
+        TO-DO
       </div>
       {arr !== undefined ? (
         <div
