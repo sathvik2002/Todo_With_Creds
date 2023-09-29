@@ -18,7 +18,7 @@ interface item {
 }
 export type itemsType = item[];
 
-const items: itemsType = [
+export const items: itemsType = [
   {
     title: "2013 Subaru BRZ",
     cost: 65,
@@ -70,19 +70,3 @@ const items: itemsType = [
     img_path: m3,
   },
 ];
-
-let currentItems: itemsType = [];
-
-let i = 0;
-const NUMBER_OF_ITEMS = 10;
-
-while (i < 3) {
-  let x = Math.random() * NUMBER_OF_ITEMS;
-  x = Math.trunc(x);
-  if (!currentItems.includes(items[x])) {
-    currentItems.push(items[x]);
-    i++;
-  }
-}
-
-export default currentItems;
